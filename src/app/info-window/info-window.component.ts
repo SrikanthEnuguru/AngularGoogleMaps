@@ -1,23 +1,15 @@
-import { Component, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-info-window',
-  template: `
-    <div>Example passing params: {{ param }}</div>
-    <div>
-      Counter <button (click)="increment()">Increment</button> {{ counter }} 
-    </div>
-  `,
+  templateUrl: './info-window.component.html',
   styleUrls: ['./info-window.component.css']
 })
-export class InfoWindowComponent {
+export class InfoWindowComponent implements OnInit {
 
-  param: any;
-  counter: number = 0;
+  constructor() { }
 
-  onCounterIncremented = new EventEmitter();
-  increment() {
-    this.onCounterIncremented.emit(++this.counter);
+  ngOnInit() {
   }
 
 }
