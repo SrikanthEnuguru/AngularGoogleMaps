@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-info-window',
+  selector: 'info-window',
   templateUrl: './info-window.component.html',
   styleUrls: ['./info-window.component.css']
 })
-export class InfoWindowComponent implements OnInit {
+export class InfoWindowComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  latitude: number;
+  longitude: number;
 }

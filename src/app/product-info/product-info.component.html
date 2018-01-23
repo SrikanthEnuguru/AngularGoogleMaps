@@ -1,0 +1,11 @@
+<form>
+  <div class="form-group col-lg-2">
+      <label for="productID"><b>Product ID :</b></label>
+      <input [(ngModel)]="prodID" name="productID" type="text" id="productID" 
+      class="form-control" #productID="ngModel">
+      <div class="alert alert-danger" *ngIf="productID.touched && !productID.valid">
+          <div *ngIf="productID.errors.required">Product ID is required.</div>
+      </div>
+  </div>
+</form>
+{{productID.value}}
